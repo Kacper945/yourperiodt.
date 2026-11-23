@@ -290,3 +290,22 @@ footer a {
   color: var(--white);
 
 }
+/* PRESENTATION NOTE: Increases the header logo size across all pages from a single CSS file.
+   Using !important overrides the inline height="60px" in the HTML without editing all 4 pages. */
+.brand-logo-img {
+  display: flex;
+  align-items: center;
+  max-height: none;
+}
+
+.brand-logo-img img {
+  height: 95px !important; /* Adjust this number (e.g., 85px–110px) to taste */
+  max-height: none;
+  width: auto;
+}
+
+/* PRESENTATION NOTE: Slightly reduces top/bottom navbar padding so the taller logo 
+   doesn't make the header bar too bulky. */
+.nav-container {
+  padding: 0.5rem 1.5rem;
+}
