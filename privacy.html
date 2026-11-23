@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- PRESENTATION NOTE: Dedicated GDPR/RODO policy page required for Legal PESTEL and Section 8 compliance. -->
+  <title>Polityka prywatności i cookies | YourPeriodt.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="student-banner">
+    Projekt studencki realizowany na kursie Digital Marketing &amp; Social Media (Politechnika Wrocławska). Strona ma charakter edukacyjny i nie prowadzi realnej sprzedaży.
+  </div>
+
+  <header>
+    <div class="nav-container">
+      <a href="index.html" class="brand-logo">Your<span>Periodt.</span></a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Strona główna</a></li>
+          <li><a href="product.html">Produkt</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="privacy.html" class="active">Polityka prywatności</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" style="max-width: 780px;">
+    <h1>Polityka prywatności i plików cookies</h1>
+
+    <div class="card" style="margin-top: 2rem;">
+      <h3>1. Charakter strony</h3>
+      <p>
+        Serwis <strong>YourPeriodt.</strong> jest niekomercyjnym projektem studenckim realizowanym na Politechnice Wrocławskiej w ramach przedmiotu <em>Digital Marketing and Social Media</em> (semestr zimowy 2026/2027). Strona nie prowadzi sprzedaży i nie zbiera danych osobowych poprzez formularze zamówień.
+      </p>
+
+      <h3 style="margin-top: 1.5rem;">2. Pliki cookies i analityka (RODO / GDPR)</h3>
+      <p>
+        Strona wykorzystuje pliki cookies oraz pamięć przeglądarki (<code>localStorage</code>) do zapamiętania Twojej zgody na cookies oraz — po wyrażeniu zgody — do podstawowych statystyk ruchu (Google Analytics 4) wykorzystywanych wyłącznie w raporcie akademickim.
+      </p>
+
+      <h3 style="margin-top: 1.5rem;">3. Zarządzanie zgodą</h3>
+      <p style="margin-bottom: 1.25rem;">
+        W każdej chwili możesz wycofać lub zmienić swoją decyzję dotyczącą plików cookies, klikając poniższy przycisk:
+      </p>
+      <button class="btn btn-secondary" onclick="resetCookieConsent()">Zmień ustawienia cookies</button>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <div class="brand-logo" style="color: #ffffff;">Your<span>Periodt.</span></div>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Projekt studencki (Digital Marketing &amp; Social Media 2026/2027).</p>
+      </div>
+      <div>
+        <a href="index.html">Wróć na stronę główną</a>
+      </div>
+    </div>
+  </footer>
+
+  <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Informacja o plikach cookies">
+    <p>
+      Ta strona studencka wykorzystuje pliki cookies (w tym narzędzia analityczne) wyłącznie do celów edukacyjnych projektu. Szczegóły znajdziesz w <a href="privacy.html">Polityce prywatności</a>.
+    </p>
+    <div class="cookie-actions">
+      <button id="cookie-decline" class="cookie-btn cookie-decline">Odrzuć</button>
+      <button id="cookie-accept" class="cookie-btn cookie-accept">Akceptuję</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
