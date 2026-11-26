@@ -1,0 +1,26 @@
+# YourPeriodt.
+
+> YourPeriodt. to studencka koncepcja marki podpasek ze 100% bawełny organicznej (bielonej metodą TCF, bez perfum i barwników) w planowanej cenie 1 zł za sztukę. Projekt powstał na kursie Digital Marketing & Social Media na Politechnice Wrocławskiej (2026/2027). Strona ma charakter edukacyjny i NIE prowadzi realnej sprzedaży.
+
+Najważniejsze fakty:
+- Planowana cena: 1,00 zł/szt. (opakowanie 10 szt. = 10 zł). Ekologiczne podpaski w Polsce kosztują zwykle ok. 1,20–3,20 zł/szt., tradycyjne ok. 0,35–0,90 zł/szt.
+- Skład (planowany): warstwa wierzchnia i wkład ze 100% bawełny organicznej, bielenie TCF, bez perfum i barwników.
+- Grupa docelowa: uczennice i studentki w Polsce.
+- Język treści: polski.
+
+## Blog (artykuły edukacyjne)
+
+- [Podpaski organiczne – jak rozpoznać prawdziwą bawełnę i certyfikaty?](https://kacper945.github.io/yourperiodt./podpaski-organiczne-certyfikaty.html): Prawdziwie organiczną podpaskę poznasz po certyfikacie, a nie po haśle „eko”. Najpełniejszy jest GOTS (sprawdza włókno i cały proces produkcji), OCS potwierdza zawartość organicznego włókna w łańcuchu dostaw, a OEKO-TEX Standard 100 to test na szkodliwe substancje — nie dowód, że bawełna jest organiczna. TCF oznacza bielenie całkowicie bez związków chloru.
+- [Dlaczego tradycyjne podpaski powodują podrażnienia?](https://kacper945.github.io/yourperiodt./dlaczego-podpaski-podrazniaja.html): Tradycyjne podpaski podrażniają najczęściej z dwóch powodów: wilgoć, ciepło i tarcie pod słabo przepuszczającymi powietrze warstwami oraz kontakt z konkretnymi składnikami — substancjami zapachowymi, klejami lub konserwantami. To tzw. kontaktowe zapalenie skóry sromu. Pomagają: podpaski bezzapachowe, zmiana co 4–8 godzin i oddychające materiały. Jeśli objawy nie mijają — idź do lekarza.
+- [Ile naprawdę płacisz za jedną podpaskę? Porównanie rynku w Polsce](https://kacper945.github.io/yourperiodt./ile-kosztuje-podpaska.html): Przy typowej miesiączce (ok. 5 dni co ok. 28 dni) i ok. 4 podpaskach dziennie zużywasz ok. 260 podpasek rocznie. Tradycyjne podpaski (0,35–0,90 zł/szt.) to ok. 90–230 zł rocznie, ekologiczne z bawełny organicznej (ok. 1,20–3,20 zł/szt.) — ok. 315–830 zł rocznie. Planowana cena YourPeriodt. (1 zł/szt.) dawałaby ok. 260 zł rocznie.
+
+## Strony
+
+- [Strona główna](https://kacper945.github.io/yourperiodt./): misja marki, wartości i porównanie cen.
+- [Produkt](https://kacper945.github.io/yourperiodt./product.html): skład, certyfikaty i FAQ planowanego produktu.
+- [Blog](https://kacper945.github.io/yourperiodt./blog.html): lista artykułów.
+
+## Optional
+
+- [Polityka prywatności](https://kacper945.github.io/yourperiodt./privacy.html): cookies i Google Analytics 4 (tylko po zgodzie).
+- Instagram: https://www.instagram.com/your_periodt/

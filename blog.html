@@ -3,93 +3,173 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- PRESENTATION NOTE: Blog hub designed to host the 4 required team articles (1 per member) for Section 7.2. -->
+  <!-- PRESENTATION NOTE: Blog hub for the team articles (Section 7.2). Each card links to a full, AI-optimised article. -->
   <title>Blog edukacyjny | YourPeriodt.</title>
-  <meta name="description" content="Edukacja menstruacyjna bez tabu. Sprawdź, jak rozpoznać prawdziwe podpaski organiczne i dbać o zdrowie podczas okresu." />
+  <meta name="description" content="Edukacja menstruacyjna bez tabu. Jak rozpoznać prawdziwe podpaski organiczne, dlaczego podpaski podrażniają skórę i ile naprawdę kosztuje okres w Polsce." />
+  <link rel="canonical" href="https://kacper945.github.io/yourperiodt./blog.html" />
+  <meta name="robots" content="index, follow, max-snippet:-1" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pl_PL" />
+  <meta property="og:title" content="Blog edukacyjny YourPeriodt." />
+  <meta property="og:description" content="Edukacja menstruacyjna bez tabu — ze źródłami." />
+  <meta property="og:url" content="https://kacper945.github.io/yourperiodt./blog.html" />
+  <meta property="og:image" content="https://kacper945.github.io/yourperiodt./logo.png" />
+  <meta name="theme-color" content="#f7c7ff" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="alternate" type="text/plain" href="llms.txt" title="LLM-friendly site summary" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Blog",
+      "@id": "https://kacper945.github.io/yourperiodt./blog.html#blog",
+      "name": "Blog edukacyjny YourPeriodt.",
+      "url": "https://kacper945.github.io/yourperiodt./blog.html",
+      "inLanguage": "pl-PL",
+      "publisher": {
+        "@type": "Organization",
+        "name": "YourPeriodt.",
+        "url": "https://kacper945.github.io/yourperiodt./"
+      },
+      "blogPost": [
+        {
+          "@type": "BlogPosting",
+          "headline": "Podpaski organiczne – jak rozpoznać prawdziwą bawełnę i certyfikaty?",
+          "url": "https://kacper945.github.io/yourperiodt./podpaski-organiczne-certyfikaty.html",
+          "datePublished": "2026-11-26"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Dlaczego tradycyjne podpaski powodują podrażnienia?",
+          "url": "https://kacper945.github.io/yourperiodt./dlaczego-podpaski-podrazniaja.html",
+          "datePublished": "2026-11-26"
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Ile naprawdę płacisz za jedną podpaskę? Porównanie rynku w Polsce",
+          "url": "https://kacper945.github.io/yourperiodt./ile-kosztuje-podpaska.html",
+          "datePublished": "2026-11-26"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Strona główna",
+          "item": "https://kacper945.github.io/yourperiodt./"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://kacper945.github.io/yourperiodt./blog.html"
+        }
+      ]
+    }
+  ]
+}
+  </script>
 </head>
 <body>
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+
+  <!-- PRESENTATION NOTE: Mandatory student-project disclosure visible on every page. -->
   <div class="student-banner">
     Projekt studencki realizowany na kursie Digital Marketing &amp; Social Media (Politechnika Wrocławska). Strona ma charakter edukacyjny i nie prowadzi realnej sprzedaży.
   </div>
 
   <header>
     <div class="nav-container">
-      <a href="index.html" class="brand-logo-img">
-        <img src="logo.png" alt="YourPeriodt. Logo" style="height: 60px; display: block;" />
+      <a href="index.html" class="brand-logo-img" aria-label="YourPeriodt. — strona główna">
+        <img src="logo.png" alt="YourPeriodt. Logo" width="500" height="500" />
       </a>
-      <nav>
+      <nav aria-label="Menu główne">
         <ul>
           <li><a href="index.html">Strona główna</a></li>
           <li><a href="product.html">Produkt</a></li>
-          <li><a href="blog.html" class="active">Blog</a></li>
+          <li><a href="blog.html" class="active" aria-current="page">Blog</a></li>
           <li><a href="privacy.html">Polityka prywatności</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <h1>Blog YourPeriodt.</h1>
-    <p style="margin-top: 0.75rem; max-width: 680px;">
-      Rzetelna wiedza o zdrowiu menstruacyjnym, składzie podpasek i świadomych wyborach — bez wstydu i bez marketingowych mitów.
-    </p>
+  <main id="main">
+    <section class="hero" style="text-align:left">
+      <div style="max-width:var(--max);margin:0 auto">
+        <span class="eyebrow">Blog YourPeriodt.</span>
+        <h1>Wiedza o okresie — bez wstydu i bez marketingowych mitów.</h1>
+        <p style="margin:0;max-width:680px">Rzetelna wiedza o zdrowiu menstruacyjnym, składzie podpasek i świadomych wyborach. Każdy artykuł zaczyna się od krótkiej odpowiedzi i kończy listą źródeł.</p>
+      </div>
+    </section>
 
-    <!-- PRESENTATION NOTE: 4 structured slots correspond to the 4 team members required to publish 1 post each. -->
-    <div class="grid-2">
-      <article class="card">
-        <span class="price-badge">Artykuł #1 • SEO</span>
-        <h3>Podpaski organiczne – jak rozpoznać prawdziwą bawełnę i certyfikaty?</h3>
-        <p style="margin-bottom: 1rem;">
-          Wiele marek używa hasła „eko” bez pokrycia. Wyjaśniamy, czym jest bielenie bez chloru (TCF) i na jakie oznaczenia patrzeć na opakowaniu.
-        </p>
-        <p style="font-size: 0.85rem; opacity: 0.8;"><em>Wkrótce pełna treść / miejsce na link do wpisu 1</em></p>
+    <section class="container">
+      <!-- PRESENTATION NOTE: 4 slots correspond to the 4 team members (1 post each). Posts 1–3 are published. -->
+      <div class="grid-2" style="margin-top:0">
+      <article class="card post-card">
+        <span class="price-badge">Artykuł #1 • SEO • Certyfikaty</span>
+        <h2 style="font-size:1.4rem"><a class="stretched" href="podpaski-organiczne-certyfikaty.html" style="color:inherit">Podpaski organiczne – jak rozpoznać prawdziwą bawełnę i certyfikaty?</a></h2>
+        <p>Jak odróżnić prawdziwe podpaski z bawełny organicznej od „eko” marketingu? Wyjaśniamy GOTS, OCS, OEKO-TEX Standard 100 oraz bielenie TCF i ECF. Lista kontrolna w 5 krokach.</p>
+        <span class="meta"><span class="read">Czytaj →</span> • <time datetime="2026-11-26">26 listopada 2026</time> • 7 min</span>
       </article>
-
-      <article class="card">
-        <span class="price-badge">Artykuł #2 • Edukacja</span>
-        <h3>Dlaczego tradycyjne podpaski powodują podrażnienia?</h3>
-        <p style="margin-bottom: 1rem;">
-          Plastikowe warstwy, substancje zapachowe i brak przepływu powietrza — sprawdzamy, co naprawdę wpływa na komfort wrażliwej skóry.
-        </p>
-        <p style="font-size: 0.85rem; opacity: 0.8;"><em>Wkrótce pełna treść / miejsce na link do wpisu 2</em></p>
+      <article class="card post-card">
+        <span class="price-badge">Artykuł #2 • Edukacja • Zdrowie</span>
+        <h2 style="font-size:1.4rem"><a class="stretched" href="dlaczego-podpaski-podrazniaja.html" style="color:inherit">Dlaczego tradycyjne podpaski powodują podrażnienia?</a></h2>
+        <p>Swędzenie i pieczenie od podpaski? Wyjaśniamy, dlaczego tradycyjne podpaski mogą podrażniać skórę (wilgoć, tarcie, zapachy, kleje), co mówią badania i kiedy iść do lekarza.</p>
+        <span class="meta"><span class="read">Czytaj →</span> • <time datetime="2026-11-26">26 listopada 2026</time> • 6 min</span>
       </article>
-
-      <article class="card">
+      <article class="card post-card">
         <span class="price-badge">Artykuł #3 • Finanse</span>
-        <h3>Ile naprawdę płacisz za jedną podpaskę? Porównanie rynku w Polsce</h3>
-        <p style="margin-bottom: 1rem;">
-          Sprawdzamy ceny ekologicznych i konwencjonalnych podpasek w drogeriach oraz sklepach online i obliczamy roczny koszt menstruacji.
-        </p>
-        <p style="font-size: 0.85rem; opacity: 0.8;"><em>Wkrótce pełna treść / miejsce na link do wpisu 3</em></p>
+        <h2 style="font-size:1.4rem"><a class="stretched" href="ile-kosztuje-podpaska.html" style="color:inherit">Ile naprawdę płacisz za jedną podpaskę? Porównanie rynku w Polsce</a></h2>
+        <p>Ile kosztuje jedna podpaska i ile wydajesz na okres rocznie? Porównanie cen podpasek tradycyjnych i ekologicznych w Polsce w 2026 r. z kalkulacją krok po kroku.</p>
+        <span class="meta"><span class="read">Czytaj →</span> • <time datetime="2026-11-26">26 listopada 2026</time> • 6 min</span>
       </article>
-
-      <article class="card">
+      <article class="card post-card soon">
         <span class="price-badge">Artykuł #4 • Szkoła</span>
-        <h3>Ubóstwo menstruacyjne w Polsce – fakty i działania w szkołach</h3>
-        <p style="margin-bottom: 1rem;">
-          27% dziewczyn opuściło kiedyś zajęcia z powodu braku środków higienicznych. Omawiamy, jak edukacja i dostępność zmieniają sytuację.
-        </p>
-        <p style="font-size: 0.85rem; opacity: 0.8;"><em>Wkrótce pełna treść / miejsce na link do wpisu 4</em></p>
+        <h2 style="font-size:1.4rem">Ubóstwo menstruacyjne w Polsce – fakty i działania w szkołach</h2>
+        <p>Omawiamy, jak edukacja i dostępność środków higienicznych zmieniają sytuację uczennic.</p>
+        <span class="meta"><em>Wkrótce pełna treść</em></span>
       </article>
-    </div>
+      </div>
+    </section>
   </main>
 
   <footer>
     <div class="footer-inner">
       <div>
         <div class="brand-logo" style="color: #ffffff;">Your<span>Periodt.</span></div>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Projekt studencki (Digital Marketing &amp; Social Media 2026/2027).</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; max-width: 320px;">Projekt studencki (Digital Marketing &amp; Social Media 2026/2027), Politechnika Wrocławska.</p>
       </div>
       <div>
-        <a href="privacy.html">Polityka prywatności i cookies</a>
+        <strong>Strona</strong>
+        <ul style="margin-top:0.4rem">
+          <li><a href="product.html">Produkt</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="privacy.html">Polityka prywatności i cookies</a></li>
+        </ul>
+      </div>
+      <div>
+        <strong>Znajdź nas</strong>
+        <ul style="margin-top:0.4rem">
+          <li><a href="https://www.instagram.com/your_periodt/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/people/YourPeriodt/61596752787136/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://pl.pinterest.com/your_periodt/" target="_blank" rel="noopener">Pinterest</a></li>
+        </ul>
       </div>
     </div>
+    <p class="footer-small">Treści na stronie mają charakter edukacyjny i nie zastępują porady lekarskiej.</p>
   </footer>
 
+  <!-- PRESENTATION NOTE: GDPR cookie consent banner. -->
   <div id="cookie-banner" class="cookie-banner" role="dialog" aria-label="Informacja o plikach cookies">
     <p>
       Ta strona studencka wykorzystuje pliki cookies (w tym narzędzia analityczne) wyłącznie do celów edukacyjnych projektu. Szczegóły znajdziesz w <a href="privacy.html">Polityce prywatności</a>.
@@ -102,5 +182,4 @@
 
   <script src="script.js"></script>
 </body>
-
 </html>

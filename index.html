@@ -5,15 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- PRESENTATION NOTE: SEO title and meta description target our top Polish keywords from Section 4. -->
   <title>YourPeriodt. | Podpaski organiczne ze 100% bawełny za 1 zł</title>
-  <meta name="description" content="Organiczna pielęgnacja menstruacyjna nie powinna być luksusem. Podpaski bawełniane i ekologiczne YourPeriodt. w uczciwej cenie 1 zł/szt." />
+  <meta name="description" content="Organiczna pielęgnacja menstruacyjna nie powinna być luksusem. Podpaski ze 100% bawełny organicznej, bielone bez chloru (TCF), w planowanej cenie 1 zł/szt. Edukacja menstruacyjna bez tabu." />
+  <link rel="canonical" href="https://kacper945.github.io/yourperiodt./" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
 
-  <!-- PRESENTATION NOTE: Google Fonts import for brand display font (Abril Fatface) and readable body font (Lato). -->
+  <!-- PRESENTATION NOTE: Open Graph tags control how the page looks when shared on Facebook/Instagram/Pinterest. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pl_PL" />
+  <meta property="og:site_name" content="YourPeriodt." />
+  <meta property="og:title" content="YourPeriodt. — podpaski organiczne ze 100% bawełny za 1 zł" />
+  <meta property="og:description" content="Przystępne cenowo podpaski z bawełny organicznej i rzetelna edukacja menstruacyjna bez tabu." />
+  <meta property="og:url" content="https://kacper945.github.io/yourperiodt./" />
+  <meta property="og:image" content="https://kacper945.github.io/yourperiodt./logo.png" />
+  <meta name="theme-color" content="#f7c7ff" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="alternate" type="text/plain" href="llms.txt" title="LLM-friendly site summary" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- PRESENTATION NOTE: Structured data (JSON-LD) tells search engines and AI assistants
+       exactly who we are (Organization), what the site is (WebSite) and answers to common
+       questions (FAQPage). No Product/Offer markup on purpose: there are no real sales. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://kacper945.github.io/yourperiodt./#org",
+        "name": "YourPeriodt.",
+        "url": "https://kacper945.github.io/yourperiodt./",
+        "logo": "https://kacper945.github.io/yourperiodt./logo.png",
+        "description": "Studencka koncepcja marki podpasek ze 100% bawełny organicznej w planowanej cenie 1 zł/szt., realizowana na kursie Digital Marketing & Social Media (Politechnika Wrocławska, 2026/2027).",
+        "sameAs": [
+          "https://www.instagram.com/your_periodt/",
+          "https://www.facebook.com/people/YourPeriodt/61596752787136/",
+          "https://pl.pinterest.com/your_periodt/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://kacper945.github.io/yourperiodt./#website",
+        "url": "https://kacper945.github.io/yourperiodt./",
+        "name": "YourPeriodt.",
+        "inLanguage": "pl-PL",
+        "publisher": { "@id": "https://kacper945.github.io/yourperiodt./#org" }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Ile kosztuje podpaska YourPeriodt.?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Planowana cena to 1,00 zł za sztukę (opakowanie 10 szt. = 10 zł). Ekologiczne podpaski na polskim rynku kosztują zwykle od ok. 1,20 do ponad 3 zł za sztukę." }
+          },
+          {
+            "@type": "Question",
+            "name": "Z czego są zrobione podpaski YourPeriodt.?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Warstwa wierzchnia i wkład są ze 100% bawełny organicznej bielonej metodą TCF (całkowicie bez chloru), bez perfum i barwników." }
+          },
+          {
+            "@type": "Question",
+            "name": "Czy mogę już kupić podpaski YourPeriodt.?",
+            "acceptedAnswer": { "@type": "Answer", "text": "Nie. YourPeriodt. to studencki projekt marketingowy Politechniki Wrocławskiej. Strona ma charakter edukacyjny i nie prowadzi realnej sprzedaży." }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <a href="#main" class="skip-link">Przejdź do treści</a>
+
   <!-- PRESENTATION NOTE: Mandatory student-project disclosure visible on every page. -->
   <div class="student-banner">
     Projekt studencki realizowany na kursie Digital Marketing &amp; Social Media (Politechnika Wrocławska). Strona ma charakter edukacyjny i nie prowadzi realnej sprzedaży.
@@ -21,12 +88,12 @@
 
   <header>
     <div class="nav-container">
-      <a href="index.html" class="brand-logo-img">
-        <img src="logo.png" alt="YourPeriodt. Logo" style="height: 60px; display: block;" />
+      <a href="index.html" class="brand-logo-img" aria-label="YourPeriodt. — strona główna">
+        <img src="logo.png" alt="YourPeriodt. Logo" width="500" height="500" />
       </a>
-      <nav>
+      <nav aria-label="Menu główne">
         <ul>
-          <li><a href="index.html" class="active">Strona główna</a></li>
+          <li><a href="index.html" class="active" aria-current="page">Strona główna</a></li>
           <li><a href="product.html">Produkt</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="privacy.html">Polityka prywatności</a></li>
@@ -35,68 +102,170 @@
     </div>
   </header>
 
-  <main>
-    <!-- PRESENTATION NOTE: Hero section leads with our core message and brand mission. -->
+  <main id="main">
+    <!-- PRESENTATION NOTE: Hero = core message + brand mission, two clear calls to action. -->
     <section class="hero">
-      <span class="price-badge">100% bawełna organiczna • 1 zł / szt.</span>
-      <h1>Organiczna pielęgnacja menstruacyjna nie powinna być luksusem.</h1>
-      <p>
-        Przełamujemy tabu wokół menstruacji. Tworzymy przystępne cenowo podpaski z organicznej bawełny i dzielimy się rzetelną, opartą na faktach edukacją.
-      </p>
-      <a href="product.html" class="btn">Poznaj nasze podpaski</a>
+      <div class="hero-split">
+        <div>
+          <span class="price-badge">100% bawełna organiczna • 1 zł / szt.</span>
+          <h1>Organiczna pielęgnacja menstruacyjna nie powinna być luksusem.</h1>
+          <p>
+            Przełamujemy tabu wokół menstruacji. Tworzymy przystępne cenowo podpaski z organicznej bawełny i dzielimy się rzetelną, opartą na faktach edukacją.
+          </p>
+          <div class="hero-actions">
+            <a href="product.html" class="btn">Poznaj nasze podpaski</a>
+            <a href="blog.html" class="btn btn-secondary">Czytaj bloga</a>
+          </div>
+        </div>
+        <div class="hero-art">
+          <img src="logo.png" alt="" width="500" height="500" />
+        </div>
+      </div>
     </section>
 
-    <!-- PRESENTATION NOTE: Three brand values from Section 1 (Education, Well-being, Direct). -->
+    <!-- PRESENTATION NOTE: Proof-point strip — the four facts we want people (and AI summaries) to remember. -->
+    <section class="stats" aria-label="Najważniejsze fakty">
+      <div class="stat"><strong>1 zł</strong><span>planowana cena za sztukę</span></div>
+      <div class="stat"><strong>100%</strong><span>bawełny organicznej w warstwie wierzchniej i wkładzie</span></div>
+      <div class="stat"><strong>TCF</strong><span>bielenie całkowicie bez chloru</span></div>
+      <div class="stat"><strong>0</strong><span>perfum i barwników</span></div>
+    </section>
+
+    <!-- PRESENTATION NOTE: Three brand values from Section 1 (Education, Well-being, Directness). -->
     <section class="container">
-      <h2>Nasze wartości</h2>
+      <div class="section-head">
+        <span class="eyebrow">Kim jesteśmy</span>
+        <h2>Nasze wartości</h2>
+        <p class="lead">YourPeriodt. to marka dla uczennic i studentek, które chcą zdrowszych podpasek bez przepłacania — i rozmowy o okresie bez wstydu.</p>
+      </div>
       <div class="grid-3">
         <div class="card">
+          <div class="card-icon" aria-hidden="true">E</div>
           <h3>Edukacja</h3>
           <p>Mówimy o zdrowiu menstruacyjnym, składzie podpasek i certyfikatach w oparciu o zweryfikowane źródła naukowe.</p>
         </div>
         <div class="card">
+          <div class="card-icon" aria-hidden="true">D</div>
           <h3>Dobrostan</h3>
           <p>Koniec z podrażnieniami od plastiku i sztucznych zapachów. Miękka, oddychająca bawełna organiczna dla Twojego komfortu.</p>
         </div>
         <div class="card">
+          <div class="card-icon" aria-hidden="true">B</div>
           <h3>Bezpośredniość</h3>
           <p>Zero owijania w bawełnę — przejrzysty skład, otwarta rozmowa o okresie i uczciwa cena bez zbędnej marży.</p>
         </div>
       </div>
     </section>
 
-    <!-- PRESENTATION NOTE: Value proposition comparison based on competitor research in Section 2.4. -->
+    <!-- PRESENTATION NOTE: Value proposition comparison based on competitor research in Section 2.4.
+         Visual bars make the price gap obvious in 2 seconds; the table keeps exact numbers machine-readable. -->
+    <section class="section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Uczciwa cena</span>
+          <h2>Dlaczego 1 zł za sztukę?</h2>
+          <p class="lead">
+            Większość ekologicznych podpasek na polskim rynku kosztuje od 1,80 do nawet 3,20 zł za sztukę. Naszym celem jest udostępnienie zdrowych, bawełnianych podpasek uczennicom i studentkom w cenie, która nie obciąża budżetu.
+          </p>
+        </div>
+
+        <div class="price-bars" role="img" aria-label="Porównanie cen za sztukę: YourPeriodt. 1,00 zł; marki premium D2C do 1,90 zł; ekologiczne podpaski w drogeriach do 3,20 zł; tradycyjne podpaski do 0,60 zł.">
+          <div class="bar-row"><span class="bar-label">YourPeriodt. (planowana)</span><div class="bar-track"><div class="bar-fill ours" style="width:31%"></div></div><span class="bar-val">1,00 zł</span></div>
+          <div class="bar-row"><span class="bar-label">Marki premium D2C</span><div class="bar-track"><div class="bar-fill" style="width:59%"></div></div><span class="bar-val">do 1,90 zł</span></div>
+          <div class="bar-row"><span class="bar-label">Eko podpaski — rynek</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><span class="bar-val">do 3,20 zł</span></div>
+          <div class="bar-row"><span class="bar-label">Tradycyjne drogeryjne</span><div class="bar-track"><div class="bar-fill" style="width:19%"></div></div><span class="bar-val">do 0,60 zł</span></div>
+        </div>
+
+        <div class="table-wrap">
+          <table class="comparison-table">
+            <caption class="sr-only" style="position:absolute;left:-9999px">Porównanie materiału i ceny podpasek w Polsce</caption>
+            <thead>
+              <tr>
+                <th scope="col">Marka / Kategoria</th>
+                <th scope="col">Materiał</th>
+                <th scope="col">Średnia cena za 1 szt.</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="highlight-row">
+                <td>YourPeriodt. (planowana oferta)</td>
+                <td>100% bawełna organiczna</td>
+                <td>1,00 zł</td>
+              </tr>
+              <tr>
+                <td>Marki premium D2C (organiczne)</td>
+                <td>Bawełna organiczna</td>
+                <td>1,59 – 1,90 zł</td>
+              </tr>
+              <tr>
+                <td>Tradycyjne podpaski drogeryjne</td>
+                <td>Tworzywa sztuczne / celuloza</td>
+                <td>0,35 – 0,60 zł</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">Źródło: analiza konkurencji zespołu YourPeriodt. (sekcja 2.4 projektu). Pełne porównanie z przykładowymi cenami znajdziesz w artykule <a href="ile-kosztuje-podpaska.html">„Ile naprawdę płacisz za jedną podpaskę?”</a>.</p>
+      </div>
+    </section>
+
+    <!-- PRESENTATION NOTE: Blog teaser = internal links from the homepage to our content hub (SEO + AI discovery). -->
     <section class="container">
-      <h2>Dlaczego 1 zł za sztukę?</h2>
-      <p>
-        Większość ekologicznych podpasek na polskim rynku kosztuje od 1,80 do nawet 3,20 zł za sztukę. Naszym celem jest udostępnienie zdrowych, bawełnianych podpasek uczennicom i studentkom w cenie, która nie obciąża budżetu.
-      </p>
-      <table class="comparison-table">
-        <thead>
-          <tr>
-            <th>Marka / Kategoria</th>
-            <th>Materiał</th>
-            <th>Średnia cena za 1 szt.</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr class="highlight-row">
-            <td>YourPeriodt. (planowana oferta)</td>
-            <td>100% bawełna organiczna</td>
-            <td>1,00 zł</td>
-          </tr>
-          <tr>
-            <td>Marki premium D2C (organiczne)</td>
-            <td>Bawełna organiczna</td>
-            <td>1,59 – 1,90 zł</td>
-          </tr>
-          <tr>
-            <td>Tradycyjne podpaski drogeryjne</td>
-            <td>Tworzywa sztuczne / celuloza</td>
-            <td>0,35 – 0,60 zł</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="section-head">
+        <span class="eyebrow">Z bloga</span>
+        <h2>Wiedza bez tabu</h2>
+        <p class="lead">Krótkie, konkretne artykuły ze źródłami — o certyfikatach, podrażnieniach i realnym koszcie okresu.</p>
+      </div>
+      <div class="grid-3">
+        <article class="card post-card">
+          <span class="price-badge">SEO • Certyfikaty</span>
+          <h3><a class="stretched" href="podpaski-organiczne-certyfikaty.html">Podpaski organiczne – jak rozpoznać prawdziwą bawełnę i certyfikaty?</a></h3>
+          <p>GOTS, OCS, OEKO-TEX, TCF — co naprawdę oznaczają symbole na opakowaniu.</p>
+          <span class="meta"><span class="read">Czytaj →</span> • 7 min</span>
+        </article>
+        <article class="card post-card">
+          <span class="price-badge">Edukacja • Zdrowie</span>
+          <h3><a class="stretched" href="dlaczego-podpaski-podrazniaja.html">Dlaczego tradycyjne podpaski powodują podrażnienia?</a></h3>
+          <p>Zapachy, kleje, wilgoć i tarcie — co mówią badania i co możesz zrobić.</p>
+          <span class="meta"><span class="read">Czytaj →</span> • 6 min</span>
+        </article>
+        <article class="card post-card">
+          <span class="price-badge">Finanse</span>
+          <h3><a class="stretched" href="ile-kosztuje-podpaska.html">Ile naprawdę płacisz za jedną podpaskę? Porównanie rynku w Polsce</a></h3>
+          <p>Cena za sztukę, za rok i za całe życie — z kalkulacją krok po kroku.</p>
+          <span class="meta"><span class="read">Czytaj →</span> • 6 min</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRESENTATION NOTE: On-page FAQ mirrors the FAQPage JSON-LD in <head>. -->
+    <section class="container narrow faq" style="padding-top:0">
+      <div class="section-head">
+        <span class="eyebrow">FAQ</span>
+        <h2>Najczęstsze pytania</h2>
+      </div>
+      <details>
+        <summary>Ile kosztuje podpaska YourPeriodt.?</summary>
+        <div class="answer"><p>Planowana cena to <strong>1,00 zł za sztukę</strong> (opakowanie 10 szt. = 10 zł). Ekologiczne podpaski na polskim rynku kosztują zwykle od ok. 1,20 do ponad 3 zł za sztukę.</p></div>
+      </details>
+      <details>
+        <summary>Z czego są zrobione podpaski YourPeriodt.?</summary>
+        <div class="answer"><p>Warstwa wierzchnia i wkład są ze 100% bawełny organicznej bielonej metodą TCF (całkowicie bez chloru), bez perfum i barwników. Szczegóły na stronie <a href="product.html">Produkt</a>.</p></div>
+      </details>
+      <details>
+        <summary>Czy mogę już kupić podpaski YourPeriodt.?</summary>
+        <div class="answer"><p>Nie. YourPeriodt. to studencki projekt marketingowy Politechniki Wrocławskiej. Strona ma charakter edukacyjny i nie prowadzi realnej sprzedaży.</p></div>
+      </details>
+    </section>
+
+    <section class="container" style="padding-top:0">
+      <div class="cta-band">
+        <div>
+          <h2>Okres to nie tabu.</h2>
+          <p>Obserwuj nas i dołącz do rozmowy o zdrowiu menstruacyjnym.</p>
+        </div>
+        <a href="https://www.instagram.com/your_periodt/" class="btn" target="_blank" rel="noopener">@your_periodt na Instagramie</a>
+      </div>
     </section>
   </main>
 
@@ -104,18 +273,26 @@
     <div class="footer-inner">
       <div>
         <div class="brand-logo" style="color: #ffffff;">Your<span>Periodt.</span></div>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Projekt studencki (Digital Marketing &amp; Social Media 2026/2027).</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; max-width: 320px;">Projekt studencki (Digital Marketing &amp; Social Media 2026/2027), Politechnika Wrocławska.</p>
       </div>
       <div>
-        <strong>Znajdź nas:</strong><br />
-        <a href="https://www.instagram.com/your_periodt/" target="_blank" rel="noopener">Instagram</a> •
-        <a href="https://www.facebook.com/people/YourPeriodt/61596752787136/" target="_blank" rel="noopener">Facebook</a> •
-        <a href="https://pl.pinterest.com/your_periodt/" target="_blank" rel="noopener">Pinterest</a>
+        <strong>Strona</strong>
+        <ul style="margin-top:0.4rem">
+          <li><a href="product.html">Produkt</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="privacy.html">Polityka prywatności i cookies</a></li>
+        </ul>
       </div>
       <div>
-        <a href="privacy.html">Polityka prywatności i cookies</a>
+        <strong>Znajdź nas</strong>
+        <ul style="margin-top:0.4rem">
+          <li><a href="https://www.instagram.com/your_periodt/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.facebook.com/people/YourPeriodt/61596752787136/" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://pl.pinterest.com/your_periodt/" target="_blank" rel="noopener">Pinterest</a></li>
+        </ul>
       </div>
     </div>
+    <p class="footer-small">Treści na stronie mają charakter edukacyjny i nie zastępują porady lekarskiej.</p>
   </footer>
 
   <!-- PRESENTATION NOTE: GDPR cookie consent banner (screenshot this for Section 8 evidence). -->
@@ -131,5 +308,4 @@
 
   <script src="script.js"></script>
 </body>
-
 </html>

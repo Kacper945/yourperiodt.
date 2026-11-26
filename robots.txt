@@ -1,0 +1,40 @@
+# PRESENTATION NOTE: robots.txt explicitly welcomes AI search & assistant crawlers.
+# IMPORTANT: crawlers only read robots.txt at the DOMAIN ROOT (https://kacper945.github.io/robots.txt).
+# On a GitHub Pages project site, copy this file into the kacper945.github.io user-site repo for it to take effect.
+
+User-agent: *
+Allow: /
+
+# OpenAI (ChatGPT search, ChatGPT browsing, model training)
+User-agent: OAI-SearchBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: GPTBot
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Google (Gemini / AI features) and Apple (Apple Intelligence)
+User-agent: Google-Extended
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl (used by many open AI models)
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://kacper945.github.io/yourperiodt./sitemap.xml

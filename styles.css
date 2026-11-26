@@ -1,311 +1,402 @@
-/* PRESENTATION NOTE: CSS custom properties (variables) store the exact YourPeriodt. brand kit 
-   hex codes so colors remain 100% consistent across all pages. */
+/* =========================================================
+   YourPeriodt. — shared stylesheet (v2, redesign)
+   PRESENTATION NOTE: Brand kit hex codes live in CSS variables so every page
+   (home, product, blog, articles, privacy) stays 100% consistent.
+   All class names from v1 (.card, .grid-2, .grid-3, .faq-item, .btn,
+   .price-badge, .comparison-table, .hero …) still work, so product.html and
+   privacy.html pick up the new look without any HTML changes.
+   ========================================================= */
 :root {
   --pink: #f7c7ff;
   --pink-light: #fdf2ff;
+  --pink-mid: #f2dcf7;
   --red: #f4593a;
   --red-dark: #d94326;
   --text: #352634;
+  --muted: #6b5869;
   --white: #ffffff;
   --border: #ead7ee;
+  --radius: 18px;
+  --shadow: 5px 5px 0 var(--text);
+  --shadow-pink: 5px 5px 0 var(--pink);
+  --max: 1120px;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* PRESENTATION NOTE: Lato is paired with Abril Fatface because both support Polish diacritics (ą, ć, ę, ł, ń, ó, ś, ź, ż). */
+html { scroll-behavior: smooth; }
+
+/* PRESENTATION NOTE: Lato + Abril Fatface both support Polish diacritics (ą, ć, ę, ł, ń, ó, ś, ź, ż). */
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', system-ui, sans-serif;
   color: var(--text);
-  background-color: var(--white);
-  line-height: 1.6;
+  background: var(--white);
+  line-height: 1.65;
+  font-size: 1.05rem;
+  -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, .brand-logo {
-  font-family: 'Abril Fatface', serif;
+h1, h2, h3, .brand-logo, .display {
+  font-family: 'Abril Fatface', Georgia, serif;
   font-weight: 400;
-  letter-spacing: 0.3px;
+  letter-spacing: 0.2px;
+  line-height: 1.15;
 }
+h2 { font-size: clamp(1.8rem, 3.6vw, 2.5rem); margin-bottom: 0.75rem; }
+h3 { font-size: 1.35rem; margin-bottom: 0.5rem; }
+p + p { margin-top: 0.9rem; }
 
-a {
-  color: var(--red);
-  text-decoration: none;
+a { color: var(--red-dark); text-decoration: none; }
+a:hover { text-decoration: underline; }
+img { max-width: 100%; display: block; }
+
+:focus-visible { outline: 3px solid var(--red); outline-offset: 3px; border-radius: 4px; }
+
+.skip-link {
+  position: absolute; left: -999px; top: 0;
+  background: var(--text); color: var(--white); padding: 0.5rem 1rem; z-index: 1000;
 }
+.skip-link:focus { left: 1rem; top: 1rem; }
 
-/* PRESENTATION NOTE: Top disclosure bar ensures compliance with the course ethics rule 
-   requiring transparent "student project" labeling. */
+/* ---------- Disclosure bar ---------- */
+/* PRESENTATION NOTE: Course ethics rule — "student project" disclosure on every page. */
 .student-banner {
-  background-color: var(--text);
+  background: var(--text);
   color: var(--white);
   text-align: center;
   font-size: 0.85rem;
-  padding: 0.45rem 1rem;
+  padding: 0.5rem 1rem;
 }
 
+/* ---------- Header ---------- */
 header {
-  background-color: var(--pink);
+  background: var(--pink);
   border-bottom: 2px solid var(--text);
   position: sticky;
   top: 0;
   z-index: 100;
 }
-
 .nav-container {
-  max-width: 1040px;
+  max-width: var(--max);
   margin: 0 auto;
-  padding: 1rem 1.5rem;
+  padding: 0.4rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.75rem 1.5rem;
 }
+.brand-logo-img { display: flex; align-items: center; }
+.brand-logo-img img { height: 76px !important; width: auto; }
 
-.brand-logo {
-  font-size: 1.8rem;
-  color: var(--text);
-}
-
-.brand-logo span {
-  color: var(--red);
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
+nav ul { list-style: none; display: flex; gap: 0.35rem; flex-wrap: wrap; }
 nav a {
+  display: inline-block;
   color: var(--text);
   font-weight: 700;
   font-size: 0.95rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  transition: background-color .15s ease, border-color .15s ease;
 }
+nav a:hover { text-decoration: none; background: var(--pink-light); border-color: var(--text); }
+nav a.active { background: var(--white); border-color: var(--text); color: var(--text); }
 
-nav a:hover, nav a.active {
-  color: var(--red);
-  text-decoration: underline;
+/* ---------- Layout ---------- */
+.container { max-width: var(--max); margin: 0 auto; padding: 4rem 1.5rem; }
+.narrow { max-width: 760px; }
+.section-alt { background: var(--pink-light); border-top: 2px solid var(--text); border-bottom: 2px solid var(--text); }
+.eyebrow {
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  color: var(--red-dark);
+  margin-bottom: 0.6rem;
 }
+.lead { font-size: 1.15rem; color: var(--muted); max-width: 680px; }
+.section-head { margin-bottom: 2.25rem; }
 
-.container {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 3rem 1.5rem;
-}
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+.grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem; }
 
+/* ---------- Hero ---------- */
 .hero {
-  background-color: var(--pink-light);
-  border-bottom: 1px solid var(--border);
-  text-align: center;
+  background:
+    radial-gradient(circle at 85% 20%, var(--pink) 0 18%, transparent 18.5%),
+    radial-gradient(circle at 8% 90%, var(--pink-mid) 0 12%, transparent 12.5%),
+    var(--pink-light);
+  border-bottom: 2px solid var(--text);
   padding: 4.5rem 1.5rem;
+  text-align: center;
 }
+.hero h1 { font-size: clamp(2.3rem, 5.4vw, 3.8rem); margin-bottom: 1rem; }
+.hero p { max-width: 650px; margin: 0 auto 2rem; font-size: 1.15rem; }
 
-.hero h1 {
-  font-size: clamp(2.2rem, 5vw, 3.4rem);
-  margin-bottom: 1rem;
-  line-height: 1.15;
+.hero-split {
+  max-width: var(--max);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 3rem;
+  align-items: center;
+  text-align: left;
 }
-
-.hero p {
-  max-width: 650px;
-  margin: 0 auto 2rem;
-  font-size: 1.15rem;
+.hero-split p { margin: 0 0 2rem; }
+.hero-art {
+  background: var(--white);
+  border: 2px solid var(--text);
+  border-radius: 50% 50% 46% 54% / 55% 48% 52% 45%;
+  box-shadow: 10px 10px 0 var(--red);
+  padding: 1.5rem;
+  aspect-ratio: 1 / 1;
+  display: grid;
+  place-items: center;
 }
+.hero-art img { width: 92%; height: auto; }
+.hero-actions { display: flex; gap: 0.9rem; flex-wrap: wrap; }
 
+/* ---------- Buttons & badges ---------- */
 .btn {
   display: inline-block;
-  background-color: var(--red);
+  background: var(--red);
   color: var(--white);
   padding: 0.85rem 1.75rem;
   border-radius: 999px;
   font-weight: 700;
+  font-size: 1rem;
+  font-family: inherit;
   border: 2px solid var(--text);
+  box-shadow: 3px 3px 0 var(--text);
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: transform .12s ease, box-shadow .12s ease, background-color .15s ease;
 }
-
-.btn:hover {
-  background-color: var(--red-dark);
-}
-
-.btn-secondary {
-  background-color: var(--white);
-  color: var(--text);
-}
-
-.btn-secondary:hover {
-  background-color: var(--pink);
-}
-
-/* PRESENTATION NOTE: Responsive CSS Grid automatically adapts 3-column layouts to 1 column on mobile phones. */
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.card {
-  background: var(--white);
-  border: 2px solid var(--text);
-  border-radius: 16px;
-  padding: 1.75rem;
-  box-shadow: 4px 4px 0 var(--pink);
-}
-
-.card h3 {
-  font-size: 1.4rem;
-  margin-bottom: 0.75rem;
-  color: var(--text);
-}
+.btn:hover { background: var(--red-dark); text-decoration: none; transform: translate(-1px, -1px); box-shadow: 4px 4px 0 var(--text); }
+.btn:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 var(--text); }
+.btn-secondary { background: var(--white); color: var(--text); }
+.btn-secondary:hover { background: var(--pink); }
 
 .price-badge {
   display: inline-block;
-  background-color: var(--pink);
+  background: var(--pink);
   color: var(--text);
   font-weight: 700;
-  padding: 0.35rem 0.85rem;
+  padding: 0.35rem 0.9rem;
   border-radius: 999px;
-  border: 1px solid var(--text);
+  border: 1.5px solid var(--text);
   margin-bottom: 1rem;
-  font-size: 0.9rem;
+  font-size: 0.88rem;
 }
 
-.comparison-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 1.5rem;
+/* ---------- Stat strip ---------- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-bottom: 2px solid var(--text);
+  background: var(--white);
+}
+.stat { padding: 1.6rem 1.25rem; text-align: center; border-right: 2px solid var(--text); }
+.stat:last-child { border-right: 0; }
+.stat strong { display: block; font-family: 'Abril Fatface', serif; font-weight: 400; font-size: 2rem; color: var(--red); line-height: 1.1; }
+.stat span { font-size: 0.92rem; color: var(--muted); }
+
+/* ---------- Cards ---------- */
+.card {
+  background: var(--white);
+  border: 2px solid var(--text);
+  border-radius: var(--radius);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-pink);
+}
+.card h3 { font-size: 1.4rem; margin-bottom: 0.6rem; color: var(--text); }
+.card-icon {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: var(--pink);
+  border: 2px solid var(--text);
+  display: grid; place-items: center;
+  font-family: 'Abril Fatface', serif;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
 }
 
-.comparison-table th, .comparison-table td {
-  border: 1px solid var(--text);
-  padding: 0.85rem;
-  text-align: left;
-}
+.post-card { display: flex; flex-direction: column; transition: transform .15s ease, box-shadow .15s ease; }
+.post-card:hover { transform: translate(-3px, -3px); box-shadow: 8px 8px 0 var(--pink); }
+.post-card p { color: var(--muted); }
+.post-card .meta { font-size: 0.85rem; color: var(--muted); margin-top: auto; padding-top: 1.1rem; }
+.post-card a.stretched::after { content: ""; position: absolute; inset: 0; }
+.post-card { position: relative; }
+.post-card h3 a { color: var(--text); }
+.post-card .read { font-weight: 700; color: var(--red-dark); }
+.post-card.soon { opacity: 0.75; box-shadow: none; border-style: dashed; }
+.post-card.soon:hover { transform: none; }
 
-.comparison-table th {
-  background-color: var(--pink);
-}
+/* ---------- Comparison table & price bars ---------- */
+.comparison-table { width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 1.5rem; border: 2px solid var(--text); border-radius: 14px; overflow: hidden; background: var(--white); }
+.comparison-table th, .comparison-table td { padding: 0.85rem 1rem; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+.comparison-table tr:last-child td { border-bottom: 0; }
+.comparison-table th { background: var(--pink); border-bottom: 2px solid var(--text); }
+.highlight-row { background: var(--pink-light); font-weight: 700; }
+.table-wrap { overflow-x: auto; }
+.table-note { font-size: 0.85rem; color: var(--muted); margin-top: 0.75rem; }
 
-.highlight-row {
-  background-color: var(--pink-light);
+.price-bars { margin-top: 2rem; display: grid; gap: 0.9rem; }
+.bar-row { display: grid; grid-template-columns: 220px 1fr 90px; gap: 1rem; align-items: center; }
+.bar-label { font-weight: 700; font-size: 0.95rem; }
+.bar-track { background: var(--pink-light); border: 2px solid var(--text); border-radius: 999px; height: 26px; overflow: hidden; }
+.bar-fill { height: 100%; background: var(--pink); border-right: 2px solid var(--text); }
+.bar-fill.ours { background: var(--red); }
+.bar-val { font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
+
+/* ---------- FAQ ---------- */
+.faq-item { border-bottom: 1px solid var(--border); padding: 1.25rem 0; }
+.faq-item h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
+.faq details {
+  border: 2px solid var(--text);
+  border-radius: 14px;
+  background: var(--white);
+  margin-bottom: 0.85rem;
+  overflow: hidden;
+}
+.faq summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 1.1rem 3rem 1.1rem 1.25rem;
   font-weight: 700;
+  font-size: 1.05rem;
+  position: relative;
 }
-
-.faq-item {
-  border-bottom: 1px solid var(--border);
-  padding: 1.25rem 0;
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary::after {
+  content: "+";
+  position: absolute; right: 1.1rem; top: 50%; transform: translateY(-50%);
+  font-family: 'Abril Fatface', serif; font-size: 1.5rem; color: var(--red);
 }
+.faq details[open] summary { background: var(--pink-light); border-bottom: 1px solid var(--border); }
+.faq details[open] summary::after { content: "–"; }
+.faq .answer { padding: 1rem 1.25rem 1.25rem; }
 
-.faq-item h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
-
-footer {
-  background-color: var(--text);
+/* ---------- CTA band ---------- */
+.cta-band {
+  background: var(--red);
   color: var(--white);
-  padding: 2.5rem 1.5rem;
-  margin-top: 4rem;
-}
-
-.footer-inner {
-  max-width: 1040px;
-  margin: 0 auto;
+  border: 2px solid var(--text);
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+  padding: 2.75rem;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  align-items: center;
   gap: 1.5rem;
+  flex-wrap: wrap;
 }
+.cta-band h2 { color: var(--white); margin: 0; }
+.cta-band p { color: #fff3f0; margin-top: 0.4rem; }
+.cta-band .btn { background: var(--white); color: var(--text); }
+.cta-band .btn:hover { background: var(--pink); }
 
-footer a {
-  color: var(--pink);
+/* ---------- Article (blog post) ---------- */
+/* PRESENTATION NOTE: Readable article layout (≈70 characters per line) for people,
+   plus clearly labelled blocks (summary, key facts, FAQ, sources) that AI answer
+   engines can lift as self-contained passages. */
+.breadcrumbs { font-size: 0.88rem; color: var(--muted); margin-bottom: 1.5rem; }
+.breadcrumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.breadcrumbs li + li::before { content: "›"; margin-right: 0.4rem; color: var(--muted); }
+.breadcrumbs a { color: var(--muted); }
+
+.article-header { background: var(--pink-light); border-bottom: 2px solid var(--text); }
+.article-header .container { padding-top: 2.5rem; padding-bottom: 3rem; }
+.article-header h1 { font-size: clamp(2rem, 4.6vw, 3.1rem); margin: 0.4rem 0 1rem; max-width: 900px; }
+.article-meta { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; font-size: 0.92rem; color: var(--muted); }
+
+.article { max-width: 760px; margin: 0 auto; padding: 3rem 1.5rem 1rem; }
+.article h2 { font-size: clamp(1.55rem, 3vw, 2rem); margin: 2.75rem 0 0.9rem; scroll-margin-top: 110px; }
+.article h3 { font-size: 1.25rem; margin: 1.75rem 0 0.5rem; }
+.article ul, .article ol { padding-left: 1.3rem; margin: 0.9rem 0; }
+.article li + li { margin-top: 0.4rem; }
+.article p { margin-top: 0.9rem; }
+.article strong { color: var(--text); }
+
+.tldr {
+  background: var(--white);
+  border: 2px solid var(--text);
+  border-left: 10px solid var(--red);
+  border-radius: 14px;
+  padding: 1.4rem 1.5rem;
+  box-shadow: var(--shadow-pink);
 }
+.tldr .label { font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.78rem; color: var(--red-dark); display: block; margin-bottom: 0.4rem; }
+.tldr p { margin: 0; font-size: 1.08rem; }
 
-/* PRESENTATION NOTE: Fixed bottom GDPR cookie consent banner; hidden via JS once the user makes a choice. */
+.key-facts { background: var(--pink-light); border: 2px solid var(--text); border-radius: 14px; padding: 1.25rem 1.5rem; margin-top: 1.75rem; }
+.key-facts h2 { font-size: 1.25rem; margin: 0 0 0.5rem; }
+.key-facts ul { margin: 0; }
+
+.toc { border: 2px dashed var(--text); border-radius: 14px; padding: 1.1rem 1.5rem; margin-top: 1.75rem; }
+.toc strong { display: block; margin-bottom: 0.4rem; }
+.toc ol { margin: 0; }
+
+.callout { background: var(--pink-light); border-radius: 12px; padding: 1rem 1.25rem; margin-top: 1.25rem; border: 1.5px solid var(--border); }
+.callout.warn { background: #fff4f1; border-color: #f7c2b6; }
+
+.sources { font-size: 0.93rem; }
+.sources li { word-break: break-word; }
+
+.author-box { display: flex; gap: 1rem; align-items: center; border-top: 2px solid var(--text); margin-top: 3rem; padding-top: 1.5rem; }
+.author-box img { width: 64px; height: 64px; border-radius: 50%; border: 2px solid var(--text); background: var(--pink-light); object-fit: contain; }
+.author-box p { margin: 0; font-size: 0.93rem; color: var(--muted); }
+
+.related { max-width: var(--max); margin: 0 auto; padding: 2rem 1.5rem 0; }
+
+/* ---------- Footer ---------- */
+footer { background: var(--text); color: var(--white); padding: 3rem 1.5rem; margin-top: 4rem; }
+.footer-inner { max-width: var(--max); margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 1.75rem; }
+.footer-inner ul { list-style: none; }
+.footer-inner li + li { margin-top: 0.3rem; }
+footer a { color: var(--pink); }
+.brand-logo { font-size: 1.8rem; color: var(--text); }
+.brand-logo span { color: var(--red); }
+.footer-small { max-width: var(--max); margin: 2rem auto 0; padding-top: 1.25rem; border-top: 1px solid rgba(255,255,255,.18); font-size: 0.82rem; opacity: 0.8; }
+
+/* ---------- Cookie banner ---------- */
+/* PRESENTATION NOTE: GDPR banner — hidden by script.js once the visitor chooses. */
 .cookie-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: var(--text);
-  color: var(--white);
+  position: fixed; bottom: 0; left: 0; right: 0;
+  background: var(--text); color: var(--white);
   border-top: 3px solid var(--red);
   padding: 1.25rem 1.5rem;
   display: none;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
+  justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
   z-index: 999;
 }
+.cookie-banner p { max-width: 700px; font-size: 0.9rem; }
+.cookie-banner a { color: var(--pink); }
+.cookie-actions { display: flex; gap: 0.75rem; }
+.cookie-btn { padding: 0.55rem 1.1rem; border-radius: 999px; font-weight: 700; cursor: pointer; border: 1px solid var(--white); font-size: 0.85rem; font-family: inherit; }
+.cookie-accept { background: var(--red); color: var(--white); border-color: var(--red); }
+.cookie-decline { background: transparent; color: var(--white); }
 
-.cookie-banner p {
-  max-width: 700px;
-  font-size: 0.9rem;
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .hero-split { grid-template-columns: 1fr; text-align: center; }
+  .hero-split p { margin-left: auto; margin-right: auto; }
+  .hero-actions { justify-content: center; }
+  .hero-art { max-width: 320px; margin: 0 auto; order: -1; }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .stat:nth-child(2) { border-right: 0; }
+  .stat:nth-child(-n+2) { border-bottom: 2px solid var(--text); }
+  .bar-row { grid-template-columns: 1fr 70px; }
+  .bar-label { grid-column: 1 / -1; }
+  .cta-band { padding: 2rem; }
 }
-
-.cookie-actions {
-  display: flex;
-  gap: 0.75rem;
+@media (max-width: 560px) {
+  .brand-logo-img img { height: 60px !important; }
+  .nav-container { justify-content: center; }
+  nav a { padding: 0.35rem 0.7rem; font-size: 0.9rem; }
+  .container { padding: 3rem 1.25rem; }
 }
-
-.cookie-btn {
-  padding: 0.55rem 1.1rem;
-  border-radius: 999px;
-  font-weight: 700;
-  cursor: pointer;
-  border: 1px solid var(--white);
-  font-size: 0.85rem;
-}
-
-.cookie-accept {
-  background-color: var(--red);
-  color: var(--white);
-  border-color: var(--red);
-}
-.brand-logo-img {
-  display: flex;
-  align-items: center;
-  max-height: 60px;
-}
-.brand-logo-img img {
-  max-height: 60px;
-  width: auto;
-}
-
-.cookie-decline {
-  background-color: transparent;
-  color: var(--white);
-
-}
-/* PRESENTATION NOTE: Increases the header logo size across all pages from a single CSS file.
-   Using !important overrides the inline height="60px" in the HTML without editing all 4 pages. */
-.brand-logo-img {
-  display: flex;
-  align-items: center;
-  max-height: none;
-}
-
-.brand-logo-img img {
-  height: 95px !important; /* Adjust this number (e.g., 85px–110px) to taste */
-  max-height: none;
-  width: auto;
-}
-
-/* PRESENTATION NOTE: Slightly reduces top/bottom navbar padding so the taller logo 
-   doesn't make the header bar too bulky. */
-.nav-container {
-  padding: 0.5rem 1.5rem;
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
 }
